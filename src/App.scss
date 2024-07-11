@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -11,6 +15,7 @@ header {
   align-items: center;
   max-width: 1400px;
   width: 94%;
+  height: 100%;
 
 
   .short-cut {
@@ -29,28 +34,71 @@ header {
     }
   }
 
-  .monami-gnb {
-  }
+  .monami-gnb {}
+}
+
+.nav-wrapper {
+  width: 100%;
+  border-bottom: 1px solid #eaeaea;
+  height: 89px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   .nav {
+    max-width: 1400px;
+    width: 94%;
+    height: 100%;
+
     ul {
       color: #303030;
       display: flex;
       justify-content: space-between;
       list-style-type: none;
       font-size: 17px;
+      height: 100%;
+      padding: 0;
+      margin: 0;
 
-      li+li {
-        &::before {
-          content: "";
-          margin: 0 33px;
+      li {
+        white-space: nowrap;
+      }
+
+      a {
+        color: #303030;
+        text-decoration: none;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        li {
+          display: flex;
+          padding: 4px 15px;
+          justify-content: center;
+          align-items: center;
+          padding: 4px 15px;
+          height: 100%;
+        }
+
+        &:hover {
+          li {
+            color: #c40f39;
+            border-bottom: 2px solid #c40f39;
+            padding-bottom: 1px;
+            height: calc(100% - 1px);
+            margin-bottom: 1px;
+          }
         }
       }
     }
   }
 
-  .search {
-    float: none;
-    width: 162px;
+  .sub-nav {
+    .icon {
+      height: 19px;
+      fill: #353535;
+    }
   }
 }
