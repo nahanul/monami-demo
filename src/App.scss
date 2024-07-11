@@ -1,0 +1,56 @@
+header {
+  display: flex;
+  justify-content: center;
+  height: 58px;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.sub-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  width: 94%;
+
+
+  .short-cut {
+    ul {
+      color: #9b9a9a;
+      display: flex;
+      list-style-type: none;
+      font-size: 11px;
+
+      li+li {
+        &::before {
+          content: "|";
+          margin: 0 7px;
+        }
+      }
+    }
+  }
+
+  .monami-gnb {
+  }
+
+  .nav {
+    ul {
+      color: #303030;
+      display: flex;
+      justify-content: space-between;
+      list-style-type: none;
+      font-size: 17px;
+
+      li+li {
+        &::before {
+          content: "";
+          margin: 0 33px;
+        }
+      }
+    }
+  }
+
+  .search {
+    float: none;
+    width: 162px;
+  }
+}
