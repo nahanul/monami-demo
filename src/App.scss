@@ -2,7 +2,11 @@
   box-sizing: border-box;
 }
 
-header {
+p {
+  margin: 0;
+}
+
+.head {
   display: flex;
   justify-content: center;
   height: 58px;
@@ -19,20 +23,24 @@ header {
 }
 
 .links {
-  margin-top: 14px;
-
   .sns {
-    padding-left: 93px;
+    width: 104px;
+    padding-left: 0;
 
-    ul {
-      li {}
-
-    }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 
     .sns-icon {
-      height: 19px;
-      fill: #7d7d7d;
+      fill: #fff;
+      background-color: #7d7d7d;
+
+      width: 30px;
+      height: 30px;
+
+      border-radius: 100%;
+      padding: 7.5%;
 
     }
   }
@@ -48,22 +56,20 @@ header {
 
   li {
     white-space: nowrap;
-
-  }
-
-  a {
-    color: #9b9a9a;
-    text-decoration: none;
     display: flex;
 
-    li {
-      &::before {
-        content: "|";
-        margin: 0 7px;
-      }
+    a {
+      color: #9b9a9a;
+      text-decoration: none;
+    }
+
+    &+li::before {
+      content: "|";
+      margin: 0 7px;
     }
   }
 }
+
 
 
 
@@ -126,16 +132,12 @@ header {
 
   .sub-nav {
     display: flex;
-    max-width: 1450px;
-    width: 162px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
     float: none;
-
-    .nav_search {
-      margin-right: 18px;
-    }
+    max-width: 1450px;
+    width: 66px;
 
     .btn_all {
       width: 19px;
@@ -146,4 +148,49 @@ header {
       fill: #353535;
     }
   }
+}
+
+.visual {
+  background-image: url(http://www.monami.com/images/main/visual1.jpg);
+  height: 652px;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .visual-text {
+    width: 80%;
+    font-size: 50px;
+
+    .text-upper-line {
+      margin: 0 0;
+      width: 1.75em;
+      border: 1px solid white;
+      border-top: none;
+    }
+
+    .display-1 {
+      color: #fff;
+      line-height: 120%;
+      font-weight: 200;
+    }
+
+    .display-2 {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 140%;
+      font-weight: 300;
+    } 
+  }
+}
+
+.mt-2 {
+  margin-top: 30px;
+}
+
+.mt-3 {
+  margin-top: 20px;
 }
